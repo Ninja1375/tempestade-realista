@@ -23,7 +23,8 @@ Clique na tela (ou toque no celular) para gerar um relâmpago com som e efeitos 
 - ☁️ **Nuvens animadas** em diferentes camadas (parallax).
  - 🌧️ **Chuva infinita** com pingos animados na frente e no fundo. 
 - ⚡ **Relâmpagos interativos** ao clicar, tocar ou usar teclado (Space/Enter). 
-- 🔊 **Som de trovão** gerado dinamicamente com **Web Audio API**. - 🌍 **Responsividade** para desktop e dispositivos móveis. 
+- 🔊 **Som de trovão** gerado dinamicamente com **Web Audio API**.
+- 🌍 **Responsividade** para desktop e dispositivos móveis. 
 - 🎭 **Efeitos extras**: tremor das nuvens durante os relâmpagos. 
 
 --- 
