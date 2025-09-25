@@ -1,0 +1,234 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(to bottom, #0a0a1a, #1a1a2e);
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+/* Nuvens */
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    pointer-events: none;
+}
+
+.cloud-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cloud-base {
+    bottom: 20%;
+    animation: cloudMove 40s infinite linear;
+}
+
+.cloud-mid {
+    bottom: 15%;
+    animation: cloudMove 30s infinite linear;
+    opacity: 0.8;
+}
+
+.cloud-top {
+    bottom: 10%;
+    animation: cloudMove 20s infinite linear;
+    opacity: 0.6;
+}
+
+.cloud {
+    position: absolute;
+    background: rgba(80, 90, 100, 0.8);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.cloud-1 {
+    width: 200px;
+    height: 80px;
+    top: 20px;
+    left: 5%;
+}
+
+.cloud-2 {
+    width: 250px;
+    height: 100px;
+    top: 10px;
+    left: 40%;
+}
+
+.cloud-3 {
+    width: 180px;
+    height: 70px;
+    top: 30px;
+    right: 10%;
+}
+
+.cloud-4 {
+    width: 220px;
+    height: 90px;
+    top: 15px;
+    left: 20%;
+}
+
+.cloud-5 {
+    width: 190px;
+    height: 85px;
+    top: 25px;
+    right: 30%;
+}
+
+.cloud-6 {
+    width: 150px;
+    height: 60px;
+    top: 5px;
+    left: 60%;
+}
+
+.cloud-7 {
+    width: 170px;
+    height: 75px;
+    top: 35px;
+    right: 20%;
+}
+
+@keyframes cloudMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+
+/* Relâmpago */
+.lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.lightning.active {
+    animation: lightningFlash 0.5s;
+}
+
+@keyframes lightningFlash {
+    0% { opacity: 0; }
+    10% { opacity: 0.8; }
+    20% { opacity: 0.3; }
+    30% { opacity: 0.9; }
+    40% { opacity: 0.2; }
+    50% { opacity: 0.7; }
+    60% { opacity: 0.1; }
+    70% { opacity: 0.4; }
+    80% { opacity: 0.05; }
+    90% { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+
+/* Chuva */
+.rain-container {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+}
+
+.rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.front-row {
+    z-index: 3;
+}
+
+.back-row {
+    z-index: 2;
+    opacity: 0.6;
+    filter: blur(1px);
+}
+
+.drop {
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: rainFall 1s linear infinite;
+}
+
+@keyframes rainFall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Hint */
+.hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 100;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .clouds {
+        height: 30%;
+    }
+    
+    .rain-container {
+        top: 30%;
+        height: 70%;
+    }
+    
+    .hint {
+        font-size: 12px;
+        padding: 8px 16px;
+        bottom: 10px;
+    }
+    
+    .cloud {
+        filter: blur(5px);
+    }
+    
+    .cloud-1, .cloud-2, .cloud-3, .cloud-4, .cloud-5, .cloud-6, .cloud-7 {
+        transform: scale(0.7);
+    }
+}
