@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tempestade Realista</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <!-- Sistema de Nuvens -->
+    <div class="clouds" id="clouds">
+        <div class="cloud-layer cloud-base">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+        
+        <div class="cloud-layer cloud-mid">
+            <div class="cloud cloud-4"></div>
+            <div class="cloud cloud-5"></div>
+        </div>
+        
+        <div class="cloud-layer cloud-top">
+            <div class="cloud cloud-6"></div>
+            <div class="cloud cloud-7"></div>
+        </div>
+    </div>
+
+    <!-- Efeito de Relâmpago -->
+    <div class="lightning" id="lightning"></div>
+
+    <!-- Sistema de Chuva -->
+    <div class="rain-container">
+        <div class="rain front-row" id="frontRain"></div>
+        <div class="rain back-row" id="backRain"></div>
+    </div>
+
+    <!-- Indicador -->
+    <div class="hint" id="hint">Clique em qualquer lugar para relâmpago ⚡</div>
+
+    <script src='main.js'></script>
+</body>
+
+</html>
